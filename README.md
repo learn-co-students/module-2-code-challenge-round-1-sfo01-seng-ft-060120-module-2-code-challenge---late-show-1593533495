@@ -100,7 +100,6 @@ On the episode show page, a user should see:
 On the Guest show page, add a list of the Episodes the Guest has appeared on.
 
 For each Episode, show the:
-
 - date of the Episode
 - rating for the Appearance
 
