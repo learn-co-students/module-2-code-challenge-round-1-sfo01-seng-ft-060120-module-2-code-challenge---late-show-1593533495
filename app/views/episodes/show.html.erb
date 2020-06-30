@@ -1,0 +1,7 @@
+<%= @episode.date %>
+<% @guests.each do |guest| %>
+    <% guest.updated_at == episode.updated_at %>
+    <p><%= guest.name %>
+    <br>
+    <%= link_to guest.name, guest_path(guest) %>
+<% end %>
