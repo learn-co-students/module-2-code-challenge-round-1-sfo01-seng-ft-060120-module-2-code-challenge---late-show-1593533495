@@ -1,0 +1,11 @@
+<h1><%= "Details for Episode # #{@episode.number}" %></h1>
+<br>
+
+<h4><%= "This episode aired on #{@episode.date}" %></h4>
+<h4><%= "Average Appearance Rating for this Episode: #{@episode.appearances.average(:rating)}" %></h4>
+<h4><%= "Guests Who Appeared on this Episode:" %></h4>
+<ul>
+  <% @episode.guests.uniq.each do |g| %>
+    <li><%= link_to g.name, guest_path(g) %></li>
+  <% end %>
+</ul>

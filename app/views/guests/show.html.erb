@@ -1,0 +1,10 @@
+<h1><%= "#{@guest.name}'s Bio" %></h1>
+<br>
+
+<h4><%= "Episodes #{@guest.name} has Appeared on:" %></h4>
+<ul>
+  <% @guest.appearances.order(rating: :desc).each do |appearance| %>
+    <li><%= link_to "Episode #{appearance.episode.number} - #{appearance.episode.date.strftime("%B %d, %Y")} - Rating: #{appearance.rating}", episode_path(appearance.episode) %></li>
+  <% end %>
+
+</ul>
