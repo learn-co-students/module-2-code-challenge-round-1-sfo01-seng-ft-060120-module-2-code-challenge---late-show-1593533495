@@ -1,0 +1,10 @@
+Episode Date: <%= @episode.date%><br>
+<% sum = 0%>
+Average Rating: <%#@episode.appearances do |ar|%>
+<%# sum += ar.rating %>
+<%#end%><br>
+<%# sum / @episode.appearances.length%>
+<%# I was so close to getting this 7th deliverable to work but ran out of time%>
+Guests: <% @episode.guests.each do |guest|%>
+<%= link_to guest.name, guest_path(guest)%><br>
+<%end%>

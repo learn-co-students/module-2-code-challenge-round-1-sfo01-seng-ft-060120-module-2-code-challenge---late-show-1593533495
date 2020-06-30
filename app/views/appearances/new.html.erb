@@ -1,0 +1,8 @@
+<%= flash[:message]%>
+<h1>New Appearance: </h1><br>
+<%= form_for @appearance do |f|%>
+Guest: <%= f.collection_select :guest_id, Guest.all, :id, :name %><br>
+Episode Date: <%= f.collection_select :episode_id, Episode.all, :id, :date%><br>
+Rating: <%=f.number_field :rating, in: 1..10, step: 1 %><br>
+<%= f.submit%>
+<%end%>
