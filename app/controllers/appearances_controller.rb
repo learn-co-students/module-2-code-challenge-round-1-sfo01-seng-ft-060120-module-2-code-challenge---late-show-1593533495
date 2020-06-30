@@ -22,6 +22,6 @@ class AppearancesController < ApplicationController
   private
   
   def appearance_params
-    params.require(:appearance).permit(:guest_id, :episode_id)
+    params.require(:appearance).permit(:guest_id, :episode_id, :rating)
   end
 end
