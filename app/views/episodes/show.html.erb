@@ -1,0 +1,10 @@
+<h2>Episode <%= @episode.number %> - <%= @episode.date.to_formatted_s(:long) %></h2>
+
+<h3>Guests:</h3>
+<ul>
+    <% @episode.guests.each do |guest| %>
+        <li><%= link_to guest.name, guest %></li>
+    <% end %>
+</ul>
+
+<h3>Average Rating: <%= @avg_rating %></h3>

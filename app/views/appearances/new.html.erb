@@ -1,0 +1,17 @@
+<h2>Create a New Appearance</h2>
+
+<%= flash[:message] %>
+<%= form_for @appearance do |f| %>
+
+    <%= f.label "Guest" %>
+    <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+
+    <%= f.label "Episode"%>
+    <%= f.collection_select :episode_id, Episode.all, :id, :number %>
+
+    <%= f.label "Rating"%>
+    <%= f.number_field :rating %>
+
+    <%= f.submit %>
+
+<% end %>
