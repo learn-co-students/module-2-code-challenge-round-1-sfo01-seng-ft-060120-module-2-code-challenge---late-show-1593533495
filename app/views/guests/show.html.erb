@@ -1,0 +1,13 @@
+<h2><%= @guest.name %></h2>
+
+<h3>Episodes:</h3>
+
+<% if @episodes_ordered.empty? %>
+    <h5>No episodes for this guest! <%= link_to "Create an Appearance", new_appearance_path	%></h5>
+<% else %>
+    <ul>
+        <% @guest.episodes.each do |episode| %>
+            <li><%= link_to episode.date.to_formatted_s(:long), episode %>-- Rating: <%= Appearance.find_by(guest: @guest, episode: episode).rating%></li>
+        <% end %>
+    </ul>
+<% end %>

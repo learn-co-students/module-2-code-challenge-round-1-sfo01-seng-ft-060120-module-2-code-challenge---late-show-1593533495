@@ -76,6 +76,8 @@ To log that a specific Guest appeared on a certain Episode, we need to create th
 - Episode can have multiple guests
 - Appearance stores a numeric rating
 
+Guest -< Apperance >- Episode
+
 ### 2. New Appearance Form
 
 A user can fill out a form to create a new Appearance. They can:
