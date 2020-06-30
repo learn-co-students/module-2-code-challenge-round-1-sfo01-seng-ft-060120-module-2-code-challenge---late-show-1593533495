@@ -1,0 +1,23 @@
+  <% if !!flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+    <p><%= e %></p> <br>
+    <% end %>
+  <% end %>
+  
+<p>Appearances</p>
+
+<%=form_for @appearance do |f| %>
+Guest: <%=f.collection_select(:guest_id, Guest.all, :id, :name)%><br>
+Episode: <%=f.collection_select(:episode_id, Episode.all, :id, :date)%><br>
+Rating:<%=f.number_field :rating%>
+<%= f.submit "New Appearance" %>
+<%end%>
+
+
+<%# 
+- Choose an existing guest from a select dropdown
+- Choose an existing episode from a select dropdown
+- Enter a numeric rating
+- Submit the form %>
+
+<%# After submitting the form, the user should be redirected to the selected episode's show page. %>
