@@ -75,7 +75,7 @@ To log that a specific Guest appeared on a certain Episode, we need to create th
 - Guest can appear on many episodes
 - Episode can have multiple guests
 - Appearance stores a numeric rating
-
+$$DONE
 ### 2. New Appearance Form
 
 A user can fill out a form to create a new Appearance. They can:
@@ -95,13 +95,15 @@ On the episode show page, a user should see:
 - A list of the guests who were on that episode
 - Each guest's name should link to the Guest Show page
 
+$$NOT DONE
+
 ### 4. Guest Show Page Episode links
 
 On the Guest show page, add a list of the Episodes the Guest has appeared on.
 
 For each Episode, show the:
 
-- date of the Episode
+- date of the Episode $$DO IT
 - rating for the Appearance
 
 Each Episode date should link to the show page for that Episode.
