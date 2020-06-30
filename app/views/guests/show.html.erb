@@ -1,0 +1,9 @@
+<h1><%= @guest.name %></h1>
+<h3><%= @guest.occupation %></h3>
+<h4>Episode Appearances:</h4>
+<ul>
+<% @guest.highest_rated_shows.each do |appearance| %>
+    <li><%= link_to appearance.episode.date.strftime("%B %d, %Y"), appearance.episode %></li>
+    - Rating: <%= appearance.rating %>
+<% end %>
+</ul>
